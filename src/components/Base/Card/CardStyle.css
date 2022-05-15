@@ -117,6 +117,12 @@
     cursor: pointer;
     display: block;
   }
+  .c-cardHeaderContainer {
+    padding-bottom: 5px !important;
+  }
+  .c-cardDescContainer {
+    padding-top: 5px;
+  }
 }
 
 .c-cardFunctionIcon {
