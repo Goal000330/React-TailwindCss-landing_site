@@ -1,4 +1,5 @@
 .c-root1 {
+  position: relative;
   border-radius: 8px;
   width: 270px;
   display: flex;

@@ -31,14 +31,14 @@ export default function MainBody() {
     <>
       <div className="c-mainBodyRoot">
         <div className="c-headerAndsort">
-          <div className="c-sideBarRoot">
+          {/* <div className="c-sideBarRoot">
             <ProfileCard
               connectionCnt={51}
               followerCnt={25}
               className="c-profileCard"
             />
             <DiscoverCard />
-          </div>
+          </div> */}
           <div className="c-mainBodyHeaderContainer">
             <div className="c-startPostContainer">
               <img src={userAvatar} className="c-userImgContainer" />
