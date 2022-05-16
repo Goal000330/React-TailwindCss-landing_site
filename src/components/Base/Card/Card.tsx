@@ -37,6 +37,15 @@ export default function Card({
   comDesc,
   comLink,
 }: Props) {
+  const handleLike = () => {
+    alert("hello!");
+    // const options = {
+    //   type: "native",
+    //   amount: Moralis.Units.ETH("0.5"),
+    //   receiver: "0x12c2C060b99285d5f6fC12FC73576c959B59EFDE",
+    // };
+    // let result = await Moralis.transfer(options);
+  };
   return (
     <>
       <div className={clsx("c-cardRoot", className)}>
@@ -67,7 +76,9 @@ export default function Card({
         </div>
         <div className="c-cardDescContainer">{comDesc}</div>
         <div className="c-cardLinkContainer">
-          <a className="c-cardLink">{comLink}</a>
+          <a className="c-cardLink" href={comLink}>
+            {comLink}
+          </a>
         </div>
         <div>
           {comName === MicrsoftData.comName ? (
@@ -79,7 +90,7 @@ export default function Card({
           )}
         </div>
         <div className="c-cardFooterContainer">
-          <div className="c-cardFunction">
+          <div className="c-cardFunction" onClick={() => handleLike()}>
             <img
               src={HandIcon}
               className="c-cardFunctionIcon"

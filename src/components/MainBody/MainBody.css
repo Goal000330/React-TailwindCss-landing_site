@@ -8,7 +8,7 @@
 }
 @media (max-width: 1024px) {
   .c-mainBodyRoot {
-    padding: 400px 10px 0px;
+    padding: 150px 10px 0px;
   }
 }
 @media (max-width: 768px) {
@@ -59,6 +59,15 @@
     width: 100%;
   }
 }
+@media (max-width: 1024px) {
+  .c-mobileHeader {
+    background-color: rgba(224, 224, 224);
+    position: fixed;
+    display: block !important;
+    width: 100%;
+    z-index: 99;
+  }
+}
 @media (max-width: 450px) {
   .c-mainBodyRoot {
     padding: 0px;
@@ -66,9 +75,8 @@
   .c-headerAndsort {
     display: none;
   }
-  .c-mobileHeader {
-    display: block !important;
-    width: 100%;
+  .c-cardsContainer {
+    margin-top: 118px;
   }
 }
 
@@ -133,8 +141,7 @@
 .c-divideLine {
   height: 1px;
   width: calc(100% - 100px);
-  color: rgba(224, 224, 224, 0.6);
-  background-color: #e0e0e099;
+  background-color: rgb(163, 163, 163, 0.5);
   margin-right: 9px;
 }
 
@@ -153,19 +160,25 @@
 .c-sortByContent {
   cursor: pointer;
   display: flex;
+  align-items: center;
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.63px;
   color: rgba(0, 0, 0);
 }
-
 .c-dropDownIcon {
+  margin-top: 2px;
+}
+.c-dropDownIcon path {
+  fill: black;
+  fill-opacity: 1;
 }
 
 .c-cardsContainer {
   max-width: 570px;
   width: 570px;
+  z-index: 90;
 }
 
 .c-cardFunction {

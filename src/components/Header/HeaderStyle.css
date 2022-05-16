@@ -77,7 +77,8 @@
 }
 @media (max-width: 1024px) {
   .headerRoot {
-    height: auto;
+    /* height: auto; */
+    display: none;
   }
   .avatarContainer {
     padding: 0px !important;
@@ -117,6 +118,16 @@
 .headerIcon {
   width: 24px;
   height: 24px;
+  fill: #666666;
+  fill-opacity: 0.6;
+}
+.active_headerIcon {
+  width: 24px;
+  height: 24px;
+}
+.active_headerIcon path {
+  fill: black !important;
+  fill-opacity: 1 !important;
 }
 .headerLetter {
   font-family: Montserrat;
@@ -182,4 +193,7 @@
   font-size: 12px;
   line-height: 15px;
   color: #915907;
+}
+.c-testIcon path {
+  fill: blue !important;
 }

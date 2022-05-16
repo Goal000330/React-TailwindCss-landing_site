@@ -6,7 +6,7 @@ import blackMessageIcon from "./../../assets/png/blackMessage.svg";
 import noteIcon from "./../../assets/png/note.svg";
 import writeArticleIcon from "./../../assets/png/article.png";
 
-import dropDownIcon from "./../../assets/png/dropdown.svg";
+import { ReactComponent as DropDownIcon } from "./../../assets/png/dropdown.svg";
 import "./MainBody.css";
 
 import {
@@ -31,14 +31,6 @@ export default function MainBody() {
     <>
       <div className="c-mainBodyRoot">
         <div className="c-headerAndsort">
-          {/* <div className="c-sideBarRoot">
-            <ProfileCard
-              connectionCnt={51}
-              followerCnt={25}
-              className="c-profileCard"
-            />
-            <DiscoverCard />
-          </div> */}
           <div className="c-mainBodyHeaderContainer">
             <div className="c-startPostContainer">
               <img src={userAvatar} className="c-userImgContainer" />
@@ -197,71 +189,9 @@ export default function MainBody() {
               <span className="c-sortByLetter">Sort By:</span>
               <div className="c-sortByContent">
                 <span className="c-sortByConten">Top</span>
-                <img src={dropDownIcon} className="c-dropDownIcon" />
+                <DropDownIcon className="c-dropDownIcon" />
               </div>
             </div>
-          </div>
-        </div>
-        <div className="c-mobileHeader">
-          <div className="c-mobileSearchContainer">
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <img src={userAvatar} className="c-mobileAvatar" />
-              <div className="mobileSearchInputRoot">
-                <i className="fas fa-search searchIcon"></i>
-                <input
-                  type="text"
-                  className="
-                inputContainer
-                form-control
-                block
-                w-full
-                px-3
-                py-1.5
-                text-base
-                font-normal
-                text-gray-700
-                bg-white bg-clip-padding
-
-                border-transparent
-                rounded
-                transition
-                ease-in-out
-                m-0
-                 focus:outline-none
-            "
-                  id="exampleFormControlInput1"
-                  placeholder="Example label"
-                />
-              </div>
-            </div>
-
-            <img src={blackMessageIcon} className="c-blackMessageIcon" />
-          </div>
-          <div className="c-talkInputContainer">
-            <img src={noteIcon} />
-            <input
-              type="text"
-              className="
-                talkInput
-                form-control
-                block
-                w-full
-                
-                text-base
-                font-normal
-                text-gray-700
-                bg-white bg-clip-padding
-
-                border-transparent
-                rounded
-                transition
-                ease-in-out
-                m-0
-                 focus:outline-none
-            "
-              id="exampleFormControlInput1"
-              placeholder="What do you want to talk about?"
-            />
           </div>
         </div>
 

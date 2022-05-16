@@ -2,15 +2,20 @@ import "./HeaderStyle.css";
 import adminIcon from "./../../assets/png/admin.png";
 import textureIcon from "./../../assets/png/texture.png";
 import linkdinIcon from "./../../assets/png/linkdin.png";
-import homeIcon from "./../../assets/png/Home.svg";
-import mynetworkIcon from "./../../assets/png/myNetwork.svg";
-import jobIcon from "./../../assets/png/job.svg";
-import messageIcon from "./../../assets/png/message.svg";
-import notificationIcon from "./../../assets/png/notification.svg";
-import dropDownIcon from "./../../assets/png/dropdown.svg";
+
+import { ReactComponent as HomeIcon } from "./../../assets/png/Home.svg";
+import { ReactComponent as MynetworkIcon } from "./../../assets/png/myNetwork.svg";
+import { ReactComponent as JobIcon } from "./../../assets/png/job.svg";
+import { ReactComponent as MessageIcon } from "./../../assets/png/message.svg";
+import { ReactComponent as NotificationIcon } from "./../../assets/png/notification.svg";
+
+import { ReactComponent as DropDownIcon } from "./../../assets/png/dropdown.svg";
+
 import { HeaderLinkData } from "./../../config/constant";
 import { useState } from "react";
 import clsx from "clsx";
+import { ReactComponent as TestIcon } from "./../../assets/png/myNetwork.svg";
+
 export default function Header() {
   const [activeHeader, setActiveHeader] = useState(1);
   const handleHeader = (index: number) => {
@@ -64,7 +69,11 @@ export default function Header() {
               role="presentation"
               onClick={() => handleHeader(HeaderLinkData.home)}
             >
-              <img src={homeIcon} className="headerIcon" />
+              <HomeIcon
+                className={clsx("headerIcon", {
+                  ["active_headerIcon"]: activeHeader === HeaderLinkData.home,
+                })}
+              />
               <a
                 href="#tabs-home3"
                 className={clsx(
@@ -92,7 +101,12 @@ export default function Header() {
               role="presentation"
               onClick={() => handleHeader(HeaderLinkData.myNetwork)}
             >
-              <img src={mynetworkIcon} className="headerIcon" />
+              <MynetworkIcon
+                className={clsx("headerIcon", {
+                  ["active_headerIcon"]:
+                    activeHeader === HeaderLinkData.myNetwork,
+                })}
+              />
               <a
                 href="#tabs-profile3"
                 className={clsx(
@@ -120,7 +134,11 @@ export default function Header() {
               role="presentation"
               onClick={() => handleHeader(HeaderLinkData.jobs)}
             >
-              <img src={jobIcon} className="headerIcon" />
+              <JobIcon
+                className={clsx("headerIcon", {
+                  ["active_headerIcon"]: activeHeader === HeaderLinkData.jobs,
+                })}
+              />
               <a
                 href="#tabs-messages3"
                 className={clsx(
@@ -137,7 +155,7 @@ export default function Header() {
                 aria-controls="tabs-messages3"
                 aria-selected="false"
               >
-                jobs
+                Jobs
               </a>
             </li>
             <li
@@ -148,7 +166,12 @@ export default function Header() {
               role="presentation"
               onClick={() => handleHeader(HeaderLinkData.messaging)}
             >
-              <img src={messageIcon} className="headerIcon" />
+              <MessageIcon
+                className={clsx("headerIcon", {
+                  ["active_headerIcon"]:
+                    activeHeader === HeaderLinkData.messaging,
+                })}
+              />
               <a
                 href="#tabs-messages3"
                 className={clsx(
@@ -176,7 +199,12 @@ export default function Header() {
               role="presentation"
               onClick={() => handleHeader(HeaderLinkData.notification)}
             >
-              <img src={notificationIcon} className="headerIcon" />
+              <NotificationIcon
+                className={clsx("headerIcon", {
+                  ["active_headerIcon"]:
+                    activeHeader === HeaderLinkData.notification,
+                })}
+              />
               <a
                 href="#tabs-messages3"
                 className={clsx(
@@ -199,12 +227,12 @@ export default function Header() {
             <li className="avatarContainer">
               <img className="avatar" src={adminIcon} />
               <span className="dropDownLetterContainer">
-                Me <img src={dropDownIcon} className="dropDownIcon" />
+                Me <DropDownIcon className="dropDownIcon" />
               </span>
             </li>
             <li className="textureContainer">
               <img src={textureIcon} className="textureIcon" />
-              <img src={dropDownIcon} className="dropDownIcon" />
+              <DropDownIcon className="dropDownIcon" />
             </li>
             <li className="premiumLetter">Try Premium for free</li>
           </ul>
